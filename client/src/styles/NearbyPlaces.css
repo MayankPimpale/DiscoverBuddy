@@ -1,0 +1,86 @@
+/* Main container */
+.places-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Individual place card */
+.place-card {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: black;
+}
+
+/* Hover effect */
+.place-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Place card header */
+.place-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Icon styles */
+.place-icon {
+    color: #ffcc00;
+    transition: transform 0.3s ease;
+}
+
+/* Icon hover effect */
+.place-card:hover .place-icon {
+    transform: scale(1.2);
+}
+
+/* Place name */
+.place-card h4 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+/* Place details */
+.place-card p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin: 5px 0;
+}
+
+/* Place Rating */
+.place-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #ffa500; /* Gold color for ratings */
+}
+
+.star-icon {
+    color: gold;
+    margin-right: 5px;
+}
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .places-container {
+        grid-template-columns: 1fr;
+    }
+}

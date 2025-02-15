@@ -1,0 +1,121 @@
+/* 🌟 How It Works Section */
+.how-it-works {
+  padding: 4rem 2rem;
+  background: #f9f9f9; /* Light green gradient */
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* 🌟 Section Title */
+.how-it-works .section-title {
+  font-size: 2.5rem;
+  color: #2E8B57;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 🌟 Steps Container (One Line Layout) */
+.steps-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+  padding-bottom: 1rem;
+  max-width: 100%;
+}
+
+/* 🌟 Individual Step Card */
+.step-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 380px; /* Increased width */
+  height: 450px; /* Increased height */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🌟 Step Icons */
+.step-card .icon {
+  font-size: 4rem; /* Larger icons */
+  color: #2E8B57;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* 🌟 Step Title */
+.step-card h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+/* 🌟 Step Description */
+.step-card p {
+  font-size: 1.2rem; /* Larger text */
+  color: #666;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+/* 🌟 Hover Effects */
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.step-card:hover .icon {
+  transform: scale(1.2);
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 1200px) {
+  .steps-container {
+      overflow-x: auto; /* Enables horizontal scrolling */
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+  }
+
+  .step-card {
+      min-width: 360px; /* Ensures cards remain large */
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-container {
+      flex-direction: row;
+      overflow-x: scroll; /* Enables scrolling on smaller screens */
+      padding-bottom: 1rem;
+  }
+
+  .step-card {
+      width: 320px;
+      height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-it-works {
+      padding: 3rem 1rem;
+  }
+
+  .how-it-works .section-title {
+      font-size: 2rem;
+  }
+
+  .step-card {
+      width: 300px;
+      height: 380px;
+  }
+}

@@ -1,0 +1,74 @@
+/* Testimonials Section */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2E8B57;
+    margin-bottom: 2rem;
+  }
+  
+  /* Testimonials Container */
+  .testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  /* Testimonial Card */
+  .testimonial-card {
+    background-color: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Testimonial Image */
+  .testimonial-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  /* Testimonial Name */
+  .testimonial-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Testimonial Location */
+  .testimonial-location {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 1rem;
+  }
+  
+  /* Testimonial Feedback */
+  .testimonial-feedback {
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  

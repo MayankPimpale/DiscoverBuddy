@@ -1,0 +1,128 @@
+/* 🌟 Profile Page Styling - Scoped with .profile-container */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background:  #f9f9f9;; /* Gradient Background */
+  padding: 20px;
+}
+
+/* 🌟 Profile Card - Scoped */
+.profile-container .profile-card {
+  background: rgba(255, 255, 255, 0.1); /* Glass Effect */
+  backdrop-filter: blur(15px); /* Blurry Background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+  color: black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.profile-container .profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* 🌟 Profile Header */
+.profile-container .profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Profile Icon */
+.profile-container .profile-header svg {
+  font-size: 60px;
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+/* Profile Name */
+.profile-container .profile-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* 🌟 Profile Details - Scoped */
+.profile-container .profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: inset 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* 🌟 Individual Detail */
+.profile-container .profile-details div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-right: 4px;
+}
+
+/* Last Detail Item (Remove Bottom Border) */
+.profile-container .profile-details div:last-child {
+  border-bottom: none;
+}
+
+/* 🌟 Icons */
+.profile-container .icon {
+  font-size: 20px;
+  color: #ffd700;
+  margin-right: 20px; /* Gold Color */
+}
+
+/* Labels */
+.profile-container .profile-details label {
+  font-weight: bold;
+  flex: 1;
+  text-align: left;
+}
+
+/* 🌟 Profile Actions */
+.profile-container .profile-actions {
+  margin-top: 20px;
+}
+
+/* 🌟 Logout Button */
+.profile-container .btn-secondary {
+  background: #de0609;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+/* Hover Effect */
+.profile-container .btn-secondary:hover {
+  background: #e10804;
+  transform: scale(1.05);
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 500px) {
+  .profile-container .profile-card {
+      width: 90%;
+      padding: 20px;
+  }
+  
+  .profile-container .profile-header svg {
+      font-size: 50px;
+  }
+}

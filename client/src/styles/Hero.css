@@ -1,0 +1,121 @@
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    padding: 50px;
+  }
+  
+  .hero-title::after {
+    content: "|"; /* The blinking cursor */
+    animation: blink 0.7s step-end infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  
+  /* Hero Text Content */
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2E8B57;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  /* Buttons */
+  .hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    
+  }
+  
+  .btn-primary {
+    background-color: #2E8B57;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+    width: 50%;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2dd476;
+  }
+  
+  .btn-secondary {
+    background-color: white;
+    color: #2E8B57;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid #2E8B57;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #2E8B57;
+    color: white;
+  }
+  
+  /* Hero Image */
+  .hero-image img {
+    width: 800px; /* Set the width to 400px */
+    height: 500px; 
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 2%;
+  }
+  
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* #intro-animation {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+} */

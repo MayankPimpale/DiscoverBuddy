@@ -1,0 +1,87 @@
+/* Auth Page Container */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    overflow-x: hidden ;
+  }
+.background{
+  background-image: url("https://livesql.oracle.com/ords/r/livesql/590/files/static/v487/images/sienna_2x.png");
+  height: 100vh;
+  width: 100vw;
+}
+.auth-container {
+    max-width: 400px;
+    margin: 2.5rem auto;
+    padding: 3rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* overflow: hidden; */
+ }
+
+ .error-message{
+    color: red;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    text-align: center;
+ }
+  
+  .auth-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    padding-right: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    border-color: #2e8b57;
+  }
+  
+  /* Submit Button */
+  .login-button {
+    background-color: #2e8b57;
+    color: white;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #246a44;
+  }
+  

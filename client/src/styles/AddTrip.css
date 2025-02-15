@@ -1,0 +1,214 @@
+/* AddTrip.css */
+.add-trip-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.add-trip-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.form-group,
+.form-group1 {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+.category{
+  font-family: 'Raleway', sans-serif;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #6c63ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+.form-group textarea {
+  resize: none;
+  min-height: 550px;
+}
+
+.form-group1 label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.form-group1 .MuiRating-root {
+  margin-top: 0.5rem;
+}
+
+.form-group input[type="file"] {
+  
+  font-size: 0.9rem;
+}
+
+.btn-primary0 {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #5751e2;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.success-message {
+  color: #4caf50;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+input[type="file"] {
+  display: block;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+#videos {
+  margin-top: 10px;
+}
+
+.image-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.image-preview {
+  position: relative;
+  width: 150px;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.image-preview input {
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.locations-list {
+  margin-top: 10px;
+}
+
+.location-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.location-item span {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.location-item button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.location-item button:hover {
+  background-color: #d32f2f;
+}
+
+
+@media (max-width: 768px) {
+  .add-trip-container {
+    padding: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+  }
+}
+
+.button01{
+    cursor: pointer;
+    border: black;
+    padding: 0.7em 1.5em;
+    background-color: #6c63ff;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 5px 0 0;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+
+
