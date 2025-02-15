@@ -13,7 +13,7 @@ const TripComments = ({ tripId }) => {
     useEffect(() => {
         const fetchComments = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/trips/${tripId}/comments`);
+                const response = await axios.get(`https://discoverbuddy.onrender.com/api/trips/${tripId}/comments`);
                 // console.log("Fetched comments:", response.data); // Log fetched comments
                 setComments(response.data);
             } catch (err) {
@@ -52,7 +52,7 @@ const TripComments = ({ tripId }) => {
                 // console.log("Updated comments in state:", [...prev, newCommentObject]);
                 return [...prev, newCommentObject];
             });
-            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/trips/${tripId}/comments`, {
+            const response = await axios.post(`https://discoverbuddy.onrender.com/api/trips/${tripId}/comments`, {
                 userId: userId, 
                 username,
                 comment: newComment,

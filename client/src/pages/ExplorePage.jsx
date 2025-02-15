@@ -18,10 +18,9 @@ const ExplorePage = () => {
   const loggedInUserId = localStorage.getItem("userId");
 
   useEffect(() => {
-    // console.log("API Base URL:", process.env.REACT_APP_API_BASE_URL);
     const fetchTrips = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/auth/trips`);
+        const response = await axios.get(`https://discoverbuddy.onrender.com/api/auth/trips`);
         setTrips(response.data.trips); // Assuming the response structure is { trips: [...] }
       } catch (err) {
         setError("Failed to load trips. Please try again later.");

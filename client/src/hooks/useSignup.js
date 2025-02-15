@@ -16,7 +16,7 @@ export const useSignup = () => {
         setIsLoading(true);
         setError(null);
         try{
-            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/auth/signup`, {
+            const response = await axios.post(`https://discoverbuddy.onrender.com/api/auth/signup`, {
                 username,email,password,
             });
             // console.log("API Response:", response.data);

@@ -19,7 +19,7 @@ export const useProfile = () => {
     }
 
     try{
-        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/auth/profile`, {
+        const response = await axios.get(`https://discoverbuddy.onrender.com/api/auth/profile`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },

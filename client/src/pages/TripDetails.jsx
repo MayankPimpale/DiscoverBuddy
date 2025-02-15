@@ -121,7 +121,7 @@ const TripDetails = () => {
     }, [trip]);
     const fetchComments = async () => {
         try {
-            const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/trips/${tripId}/comments`);
+            const response = await axios.get(`https://discoverbuddy.onrender.com/api/trips/${tripId}/comments`);
             // console.log("Fetched Comments:", response.data);
             setComments(response.data); // ✅ Updates comments dynamically
         } catch (err) {
@@ -134,10 +134,10 @@ const TripDetails = () => {
         const fetchTripDetails = async () => {
             try {
                 // console.log("Trip id-",tripId);
-                const tripResponse = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/trips/${tripId}`);
+                const tripResponse = await axios.get(`https://discoverbuddy.onrender.com/api/trips/${tripId}`);
                 //console.log("Fetched Trip Details:", tripResponse.data);
                 setTrip(tripResponse.data);
-                const commentsResponse = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/trips/${tripId}/comments`);
+                const commentsResponse = await axios.get(`https://discoverbuddy.onrender.com/api/trips/${tripId}/comments`);
                 
                 setComments(commentsResponse.data);
             } catch (err) {
@@ -169,7 +169,7 @@ const TripDetails = () => {
             const userId = decoded?.userId;
             //const username = decoded?.username;
             const response = await axios.post(
-                `${process.env.REACT_APP_API_BASE_URL}/api/trips/${tripId}/comments`,
+                `https://discoverbuddy.onrender.com/api/trips/${tripId}/comments`,
                 { comment: newComment, userId: userId },
                 {
                     headers: {
@@ -215,7 +215,7 @@ const TripDetails = () => {
                                 {trip.images.map((image, index) => (
                                     <div key={index}>
                                         <img
-                                            src={`${process.env.REACT_APP_API_BASE_URL}${image.url}`}
+                                            src={`https://discoverbuddy.onrender.com${image.url}`}
                                             alt={`${trip.name} - Image ${index + 1}`}
                                             className="trip-image"
                                         />

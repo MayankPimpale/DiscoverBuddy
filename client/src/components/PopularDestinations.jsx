@@ -9,7 +9,7 @@ const PopularDestinations = ({ userId }) => {
   
   useEffect(() => {
     // Fetch trips from the backend
-    axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/auth/trips`)
+    axios.get(`https://discoverbuddy.onrender.com/api/auth/trips`)
       .then((response) => {
         // console.log("Fetched Trips:", response.data.trips);
         setfetchedDestinations(response.data.trips); // Assuming backend sends a `trips` array
@@ -29,7 +29,7 @@ const PopularDestinations = ({ userId }) => {
       <div className="destination-cards">
         {displayedDestinations.map((dest) => (         
           <Link to={`/trip/${dest._id}`} className="destination-card"  key={dest._id}>
-            <img src={`${process.env.REACT_APP_API_BASE_URL}${dest.images[0]?.url}`} alt={dest.name} />
+            <img src={`https://discoverbuddy.onrender.com${dest.images[0]?.url}`} alt={dest.name} />
             <h3>{dest.name}</h3>
             {/* <p>{dest.description}</p> */}
             <p>{dest.locations.join(", ")}</p>

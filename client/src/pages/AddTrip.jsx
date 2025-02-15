@@ -111,7 +111,7 @@ const AddTrip = () => {
           formToSend.append("locations", JSON.stringify(locations)); 
           try {
             //console.log([...formToSend.entries()]);
-            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/auth/add-trip`, formToSend, {
+            const response = await axios.post(`https://discoverbuddy.onrender.com/api/auth/add-trip`, formToSend, {
               headers: {
                 "Content-Type": "multipart/form-data",
                 Authorization: `Bearer ${localStorage.getItem("token")}`, // Important for file upload

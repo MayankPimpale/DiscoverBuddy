@@ -10,7 +10,7 @@ const HeroSectionExplore = ({cards}) => {
   useEffect(() => {
     const fetchTrips = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/trips`);
+        const response = await axios.get(`https://discoverbuddy.onrender.com/api/trips`);
         console.log("Fetched trips:", response.data); // Debug API response
   
         if (Array.isArray(response.data)) {

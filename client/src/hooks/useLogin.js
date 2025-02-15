@@ -17,7 +17,7 @@ export const useLogin = () => {
         setError(null); // Reset previous errors
         try {
             //console.log("Sending login request with:", { email, password });
-            const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/auth/login`, { email, password });
+            const response = await axios.post(`https://discoverbuddy.onrender.com/api/auth/login`, { email, password });
             //console.log("API Response:", response);
             // console.log("API Response:", response.data);
             const {token , user} = response.data;
