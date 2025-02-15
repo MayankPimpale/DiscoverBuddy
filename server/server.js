@@ -24,7 +24,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://discoverbuddy.onrender.com',
   methods: ['GET', 'PUT', 'POST', 'DELETE'],
   credentials: true,
 }));
