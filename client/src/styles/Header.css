@@ -101,6 +101,9 @@
     color: white;
   }
 
+.menu-toggle{
+  display: none;
+}
 /* Mobile Compatibility */
 @media (max-width: 768px) {
   .header {
