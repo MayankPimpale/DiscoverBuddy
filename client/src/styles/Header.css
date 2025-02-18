@@ -1,102 +1,73 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: white;
-    box-shadow: 0px 2px 4px rgb(222, 216, 216);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    color: #2E8B57;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgb(222, 216, 216);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #2E8B57;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #2E8B57;
+}
+
+/* Desktop Navigation */
+.header-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Show the hamburger menu */
+  .mobile-menu-toggle {
+    display: block;
   }
-  
-  /* Logo */
-  .header-logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2E8B57;
-    font-family: 'Parkinsons', serif;
-    text-decoration: none;
-    font-style: italic;
-  }
-  
-  /* Navigation links */
+
+  /* Hide nav menu by default on mobile */
   .header-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: white;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  /* When menu is open, show navbar */
+  .header-nav.open {
     display: flex;
-    gap: 1.5rem;
-  }
-  
-  .header-nav a {
-    color: #2E8B57;
-    font-size: 1rem;
-    font-weight: 700;
-    text-decoration: none;
-  }
-  
-  .header-nav a:hover {
-    color: #23232B;
-    text-decoration: solid;
-  }
-  
-  
-  .header-auth a {
-    color: #2E8B57;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 10px;
-  }
-  
-  .header-auth a:hover {
-    color: #23232B;
   }
 
-  .header-auth span {
-    font-weight: bold;
-    margin-right: 10px;
+  /* Center auth buttons in menu */
+  .header-auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
-  
-  .header-auth button {
-    background-color: #ff0000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
+}
 
+/* Desktop Only: Keep Nav Always Visible */
+@media (min-width: 769px) {
+  .header-nav {
+    display: flex !important;
   }
-  
-  .header-auth button:hover {
-    background-color: #cc0000;
-  }
-  
-  .btn {
-    font-weight: 600;
-  }
-  .btn-primary {
-    background-color: #2E8B57;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .btn-primary:hover {
-    background-color: #23232B;
-  }
-  
-  /* Secondary Button */
-  .btn-secondary {
-    background-color: transparent;
-    color: #2e8b57;
-    border: 2px solid #2e8b57;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #2e8b57;
-    color: white;
-  }
+}
