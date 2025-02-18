@@ -10,6 +10,9 @@ const Header = () => {
   const {state , dispatch} = useAuthContext();
   const {user} = state || {};
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+
   const handleLogout = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("token");
@@ -23,11 +26,14 @@ const Header = () => {
       <div className="header-logo">
         <Link to="/">DiscoverBuddy</Link>
       </div>
-      <nav className="header-nav">
-        <Link to="/">Home</Link>
-        <Link to="/explore">Explore</Link>
-        <Link to="/add-trip">Add-Trip</Link>
-        <Link to="/profile">Profile</Link>
+      <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
+      </button>
+      <nav className={`header-nav ${menuOpen ? "active" : ""}`}>
+        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link to="/explore" onClick={() => setMenuOpen(false)}>Explore</Link>
+        <Link to="/add-trip" onClick={() => setMenuOpen(false)}>Add-Trip</Link>
+        <Link to="/profile" onClick={() => setMenuOpen(false)}>Profile</Link>
       </nav>
       <div className="header-auth">
         {user ? (
@@ -39,8 +45,8 @@ const Header = () => {
           </>
         ) : (
           <>
-            <Link to="/login" className="btn">Login</Link>
-            <Link to="/signup" className="btn">Register</Link>
+            <Link to="/login" className="btn" onClick={() => setMenuOpen(false)}>Login</Link>
+            <Link to="/signup" className="btn" onClick={() => setMenuOpen(false)}>Register</Link>
           </>
         )}
       </div>
