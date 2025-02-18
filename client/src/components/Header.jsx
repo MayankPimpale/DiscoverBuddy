@@ -1,23 +1,21 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../styles/Header.css";
 import { useAuthContext } from "../hooks/UseAuthContext";
 
 const Header = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const { state, dispatch } = useAuthContext();
-  const { user } = state || {};
-  const navigate = useNavigate();
 
+  const [isLoading , setIsLoading] = useState(false);
+  const {state , dispatch} = useAuthContext();
+  const {user} = state || {};
+  const navigate = useNavigate();
   const handleLogout = () => {
-    setIsLoading(true);
     localStorage.removeItem("user");
     localStorage.removeItem("token");
-    dispatch({ type: "LOGOUT" });
+    dispatch({type: "LOGOUT"});
     setIsLoading(false);
-    setMenuOpen(false);
-    navigate("/");
+    navigate('/');
   };
 
   return (
@@ -25,19 +23,12 @@ const Header = () => {
       <div className="header-logo">
         <Link to="/">DiscoverBuddy</Link>
       </div>
-      <button className="mobile-menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-        ☰
-      </button>
-      
-      {/* Navigation Menu */}
-      <nav className={`header-nav ${menuOpen ? "open" : ""}`}>
-        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-        <Link to="/explore" onClick={() => setMenuOpen(false)}>Explore</Link>
-        <Link to="/add-trip" onClick={() => setMenuOpen(false)}>Add-Trip</Link>
-        <Link to="/profile" onClick={() => setMenuOpen(false)}>Profile</Link>
+      <nav className="header-nav">
+        <Link to="/">Home</Link>
+        <Link to="/explore">Explore</Link>
+        <Link to="/add-trip">Add-Trip</Link>
+        <Link to="/profile">Profile</Link>
       </nav>
-
-      {/* Auth Buttons */}
       <div className="header-auth">
         {user ? (
           <>
@@ -48,8 +39,8 @@ const Header = () => {
           </>
         ) : (
           <>
-            <Link to="/login" className="btn" onClick={() => setMenuOpen(false)}>Login</Link>
-            <Link to="/signup" className="btn" onClick={() => setMenuOpen(false)}>Register</Link>
+            <Link to="/login" className="btn">Login</Link>
+            <Link to="/signup" className="btn">Register</Link>
           </>
         )}
       </div>
