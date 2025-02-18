@@ -14,10 +14,9 @@ client/.env
 /coverage
 
 # production
-/build
+#/build
 
-/uploads/
-
+#/uploads/
 
 # misc
 .DS_Store

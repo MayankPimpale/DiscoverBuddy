@@ -236,7 +236,7 @@ const AddTrip = () => {
                         </div>
                     ))}
                 </div>
-                <div className="form-group">
+                {/* <div className="form-group">
                     <label htmlFor="videos">Videos</label>
                         <input
                             type="file"
@@ -246,7 +246,7 @@ const AddTrip = () => {
                             multiple // Allow multiple video selection
                             onChange={handleVideoChange}
                         />
-                </div>
+                </div> */}
                 <div className="form-group1">
                     <label htmlFor="rating">Rate Your Experience</label>
                     <Stack spacing={1}>
